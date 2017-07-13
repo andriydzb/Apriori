@@ -1,0 +1,308 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title Apriori
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    link(rel="stylesheet" type="text/css" href="css/main.css")
+    link(rel="stylesheet" type="text/css" href="css/fonts.css")
+    link(rel="stylesheet" type="text/css" href="slick/slick.css")
+  body
+    header
+      .header
+        .page-wrapper
+          .header__top 
+            .header__top_logo
+              a(href='#')
+                img(src='img/logo.png')
+              h6 Профессиональная танцевальная студия
+
+            .header__top_info
+              i.first-sprite.first-sprite-phone
+              a(href="tel:+74952278388") +7 495 227-83-88        
+              button(type='button') Оставить заявку
+
+        .header__about
+          .page-wrapper
+            .header__about_title
+              h1 Классические и современные #[span танцы]
+              h6 для детей и взрослых от ведущих тренеров Москвы
+
+            .header__about_marks
+              mixin marks_item (text)
+                .header__about_marks_item
+                  i.first-sprite.first-sprite-check
+                  span= text
+  
+              +marks_item('С начального до профессионального уровня')
+              +marks_item('Удобное расписание для любого стиля жизни')
+              +marks_item('Комфортные залы для занятий')
+              +marks_item('Абонементы от 3990 Р')
+
+            .header__about_form
+              form(action="" id="freeForm1")
+                h4 #[span Хотите проверить?] Оставьте заявку на бесплатное пробное занятие!
+                input(type="text", name="name", placeholder="Введите имя" value="")
+                input(type="text", name="number", placeholder="Введите телефон" value="")
+                button(type="submit") Оставить заявку
+                p Мы гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.
+    
+    section.main-info 
+      .page-wrapper.position
+        .main-info__advantages
+          h2 #[span 5 преимуществ] нашей школы
+          mixin advant_item (num, title, text)
+            .main-info__advantages_item
+              span= num
+              h4= title          
+              p= text
+          +advant_item('1.', 'Ведущие тренеры', 'Лучшие тренеры и преподаватели Москвы проводят групповые и индивидуальные уроки')
+          +advant_item('2.', 'Комфортные условия', '2 современных зала с великолепным напольным покрытием, раздевалки, душевые, зона отдыха и автостоянка.')
+          +advant_item('3.', 'Перспектива роста', 'От нуля до профессионального уровня под чутким руководством преподавателя.')
+          +advant_item('4.', 'Мастер-классы', 'Организуем регулярные мастер-классы ведущих российских преподавателей.')
+          +advant_item('5.', 'Подготовка к соревнованиям', 'Проводим подготовку и выезды на фестивали и соревнования мирового уровня.')
+
+        .main-info__photos
+          .main-info__photos_items
+            img(src='./img/black-1.png')
+            img(src='./img/black-2.png')
+            img(src='./img/black-3.png')
+
+    section.main-groups 
+      .page-wrapper
+        .main-groups__info
+          .main-groups__info_title
+            h1 Мы #[span набираем учеников] в 3 возрастные группы
+          .main-groups__info_items
+            mixin groups-item (url, title, text)
+              .main-groups__info_items_item
+                .main-groups__info_items_item_img
+                  img(src= url)
+                h4= title
+                p= text
+            +groups-item('./img/teens.png', 'Подростки', 'Молодые юноши и девушки увидят мир более интересным, чем это кажется в обычной школе.')
+            +groups-item('./img/children.png', 'Дети', 'Из маленького ребенка мы делаем чемпиона соревнований.')
+            +groups-item('./img/people.png', 'Взрослые', 'Поддерживайте пластичность тела и сохраняйте молодость.')
+
+        .main-groups__form
+          form(action="" id="freeForm2")
+            h4 #[span Хотите узнать больше?] Получите #[span бесплатную] консультацию по телефону!
+            input(type="text", name="name", placeholder="Введите имя" value="")
+            input(type="text", name="number", placeholder="Введите телефон" value="")
+            button(type="submit") Получить консультацию
+            p Мы гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.
+    
+    section.main-menu
+      .page-wrapper
+        .main-menu__title 
+          h1 Представляем большой выбор #[span танцевальных направлений]
+        nav
+          ul
+            li.active
+              a Бальные танцы
+            li 
+              a Baby dance
+            li
+              a Hip-hop
+            li
+              a Hip-hop kids
+            li
+              a Хореография
+            li
+              a Zumba
+            li
+              a Дзюдо
+            li
+              a Salsa
+            li 
+              a Свадебный танец
+        .main-menu__about
+          h1 Бальные танцы
+          .main-menu__about_line
+          p Бальные танцы – это парные танцы между мужчиной и женщиной. Разделяются на европейскую программу (медленный вальс, танго, венский вальс, медленный фокстрот и квикстеп) и латиноамериканскую (самба, ча-ча-ча, румба, пасодобль и джайв).  
+        .main-menu__slider
+          div
+            img(src="./img/slider-img-1.png")
+          div
+            img(src="./img/slider-img-2.png")
+          div
+            img(src="./img/slider-img-3.png")
+          div
+            img(src="./img/slider-img-4.png")
+        .main-menu__slider-nav
+          img(src="./img/slider-img-1.png")
+          img(src="./img/slider-img-2.png")
+          img(src="./img/slider-img-3.png")
+          img(src="./img/slider-img-4.png")
+        
+    section.main-prices
+      .page-wrapper
+        .main-prices__content
+          .main-prices__content_title
+            h1 Предлагаем доступные цены
+          .main-prices__content_table
+            table
+              tr.main-prices__content_table-top
+                th Стоимость услуг на танцевальные направления
+                th Срок действия
+                th Стоимость, руб.
+              tr
+                td Разовое посещение
+                td ***
+                td 600
+              tr
+                td Абонемент на 1 месяц (8–12 групповых занятий)
+                td 30 календарный дней
+                td 3990/5500
+              tr
+                td Безлимитный абонемент на все направления
+                td 30 календарный дней
+                td 6990
+              tr
+                td Абонемент на 3 месяца (36 групповых занятий)
+                td 90 календарный дней
+                td 15000
+              tr
+                td Абонемент на 6 месяцев (72 групповых занятий)
+                td 180 календарных дней
+                td 28000
+              tr
+                td Индивидуальный урок с преподавателем
+                td 45 минут
+                td От 1500
+              tr
+                td Абонемент «Свадебный» (6 индивидуальных уроков + 1 в подарок)
+                td ***
+                td 12500
+            .main-prices__content_table_frame
+          .main-prices__content_form
+            form(action="" id="freeForm3")
+              h4 #[span Хотите проверить?] Оставьте заявку на #[span бесплатное] пробное занятие!
+              input(type="text", name="name", placeholder="Введите имя" value="")
+              input(type="text", name="number", placeholder="Введите телефон" value="")
+              button(type="submit") Оставить заявку
+              p Мы гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.
+
+    section.main-teachers
+      .page-wrapper
+        .main-teachers__title
+          h1 Познакомьтесь с #[span ведущими преподавателями]
+        .main-teachers__slider-nav
+          img(src="./img/teacher-1.png")
+          img(src="./img/teacher-2.png")
+          img(src="./img/teacher-3.png")
+          img(src="./img/teacher-4.png")
+        .main-teachers__about
+          .main-teachers__about_inner
+            h4 Павел Малов
+            p Павел – основатель APRIORI professional dance studio. Член президиума Национальной Танцевальной Лиги. Руководитель спортивного танцевального клуба «Априори», организатор Moscow Dance Festival, судья Всемирного танцевального совета (WDC Россия). Член Российского Танцевального Союза (РТС).
+        .main-teachers__slider
+          div
+            img(src="./img/teacher-1.png")
+          div
+            img(src="./img/teacher-2.png")
+          div
+            img(src="./img/teacher-3.png")
+          div
+            img(src="./img/teacher-4.png")
+        
+    section.main-shedule
+      i.humans.humans-human1
+        i.humans.humans-shadow
+      i.humans.humans-human2
+      .page-wrapper
+        .main-shedule__info
+          i.shape.shape-shape
+          h2 Мы занимаемся по удобному расписанию
+          p Наши занятия начинаются #[span с 10 и до 21 часа в будние и выходные дни]. Вы всегда можете выбрать <br /> подходящее для себя время
+
+    section.main-photos
+      .page-wrapper
+        .main-photos__title
+          h1 Здесь проходят наши занятия
+        .main-photos__content
+          .main-photos__content_row1
+            .main-photos__content_row1_left
+              img(src="./img/main-photo-1.png")
+            .main-photos__content_row1_right 
+              img(src="./img/main-photo-2.png")
+              img(src="./img/main-photo-3.png")
+          .main-photos__content_row2
+            img(src="./img/main-photo-4.png")
+            img(src="./img/main-photo-5.png")
+            img(src="./img/main-photo-6.png")
+        .main-photos__form 
+          form(action="" id="freeForm4")
+            h4 #[span Хотите заниматься у нас?] Оставьте заявку на #[span бесплатное] пробное занятие!
+            input(type="text", name="name", placeholder="Введите имя" value="")
+            input(type="text", name="number", placeholder="Введите телефон" value="")
+            button(type="submit") Оставить заявку
+            p Мы гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.  
+    
+    section.main-responces
+      .page-wrapper
+        .main-responces__title
+          h1 Прочтите отзывы о школе
+          h3 Мы попросили наших учеников написать, что они о нас думают
+        .main-responces__items
+          mixin responce-item (text, url, name, about)
+            .main-responces__items_item
+              .main-responces__items_item-text
+                img(src="./img/quote.png")
+                p= text
+                a(href="#") Читать полностью
+              .main-responces__items_item-human
+                img(src= url)
+                .main-responces__items_item-human-about
+                  h6= name
+                  span= about
+          +responce-item('Уникальная студия. Создана семейной парой: Маловым Павлом и Пименовой Дарьей. К каждому ребенку у тренеров индивидуальный подход, учитываются личностные особенности и физические возможности. Шанс танцевать дается любому!', './img/responce-1.png', 'Вера Ярошенко', 'Мама Кирилла Ярошенко (16 лет). Спортивные бальные танцы.')
+          +responce-item('Лучше этой студии я ещё не встречала. Очень хорошие тренеры, которые в каждого ученика вкладывают частицу себя. Находят к каждому свой подход, что очень радует.', './img/responce-2.png', 'Катарина Куницкая, 17 лет', 'Занимаюсь хип-хопом уже больше 2х лет')
+          +responce-item('Когда мы пришли в Танцевальный Клуб Априори увидели профессионализм тренерского состава, любовь к детям и своей работе. Каждое занятие тренеры проводят полезно и с пользой для воспитанников.', './img/responce-3.png', 'Эдуард Белянский', 'Папа Жени Белянской, занимается три года Бальными танцами.')
+          +responce-item('Мы пришли в коллектив только полгода назад. Нас встретили доброжелательные, увлечённые своим делом, талантливые тренеры и дружный коллектив целеустремленных танцоров разных возрастов. ', './img/responce-4.png', 'Сатирова А.', 'Дочь Александрина, 12 лет. Занимается спортивными бальными танцами.')
+    
+    section.main-banner
+      .page-wrapper
+        h2 Приходите и составьте свое мнение!
+    
+    section.main-map 
+      .page-wrapper
+        .main-map__title 
+          h1 Мы на карте Москвы
+          h3 Удобное расположение для жителей Павшинской поймы, Красногорска, Митино, Тушино.
+        .main-map__content
+          .main-map__content_contacts
+            h4 Наши контакты
+            .main-map__content_contacts_line
+            span г. Москва, Волоколамское шоссе, д. 142, БЦ Ирбис, 4-й этаж
+              i.contacts.contacts-contact-place
+            a(href="tel:+74952278388") +7 495 227-83-88
+              i.contacts.contacts-contact-phone
+            .main-map__content_contacts_social
+              span Мы в соцсетях:
+              a(href="https://www.vk.com" target="_blank")
+                i.contacts.contacts-contact-vk
+              a(href="https://www.facebook.com" target="_blank")
+                i.contacts.contacts-contact-fb
+              a(href="https://www.instagram.com" target="_blank")
+                i.contacts.contacts-contact-inst
+    
+    section.main-form
+      .page-wrapper
+        .main-form__content
+          form(action="" id="freeForm5")
+            h4 #[span Остались сомнения?] Оставьте заявку #[span на бесплатное] пробное занятие!
+            input(type="text", name="name", placeholder="Введите имя" value="")
+            input(type="text", name="number", placeholder="Введите телефон" value="")
+            button(type="submit") Оставить заявку
+            p Мы гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.
+
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js")
+    script(src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js")
+    script(src="slick/slick.js")
+    script(src="js/index.js")
+    

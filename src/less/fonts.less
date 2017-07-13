@@ -1,0 +1,16 @@
+.font-face (@fontname, @fontfile, @fontstyle: normal, @fontweight: normal) {
+  @font-face {
+    font-family: @fontname;
+    src: url('../fonts/@{fontfile}.ttf');
+    font-weight: @fontweight;
+    font-style: @fontstyle;
+  }
+}
+
+.font-face('Roboto', 'Roboto/Roboto-Thin', normal, 100);
+.font-face('Roboto', 'Roboto/Roboto-Light', normal, 200);
+.font-face('Roboto', 'Roboto/Roboto-Regular', normal, 300);
+.font-face('Roboto', 'Roboto/Roboto-Medium', normal, 400);
+.font-face('Roboto', 'Roboto/Roboto-Bold', normal, 600);
+.font-face('Roboto', 'Roboto/Roboto-Black', normal, 900);
+
